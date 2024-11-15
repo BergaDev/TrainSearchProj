@@ -51,10 +51,6 @@ table {
     color: inherit;
 }
 
-.homeLink a:visited {
-    color: white;
-}
-
 #disc {
     font-family: 'Yellowtail';
     font-size: 2em;
@@ -96,6 +92,10 @@ a:hover {
 a:visited {
     color: red;
     text-decoration: none;
+}
+
+.homeLink a:visited {
+    color: white;
 }
 
 @font-face {
