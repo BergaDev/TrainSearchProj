@@ -46,6 +46,11 @@ table {
   height: 100vh;        
 }
 
+.homeLink {
+    text-decoration: none;
+    color: inherit;
+}
+
 #disc {
     font-family: 'Yellowtail';
     font-size: 2em;
