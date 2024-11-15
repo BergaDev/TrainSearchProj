@@ -90,12 +90,8 @@ a:hover {
     color: yellow;
 }
 a:visited {
-    color: red;
+    color: inherit;
     text-decoration: none;
-}
-
-.homeLink a:visited {
-    color: white;
 }
 
 @font-face {
