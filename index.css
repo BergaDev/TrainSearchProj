@@ -51,6 +51,10 @@ table {
     color: inherit;
 }
 
+.homeLink a:visited {
+    color: inherit;
+}
+
 #disc {
     font-family: 'Yellowtail';
     font-size: 2em;
