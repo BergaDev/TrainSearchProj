@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['query'])) {
     </form>
 
     <?php if ($_SERVER["REQUEST_METHOD"] == "POST"): ?>
-        <h2 style="color: white;">Search Results:</h2>
+        <h2 id="results">Search Results:</h2>
         <?php if (!empty($searchResults)): ?>
             <table border="1">
                 <tr><th>Carriage Number</th><th>Set Number</th><th>Type Name</th></tr>
@@ -72,25 +72,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['query'])) {
                     </tr>
                 <?php endforeach; ?>
             </table>
-
-            <form action="index.php" method="POST">
-                <label for="selection">Select the set or carriage:</label>
-                <select name="selection" id="selection" required>
-                    <option value="<?= htmlspecialchars($row["setNum"]) ?>">
-                       Set Number: <?= htmlspecialchars($row["setNum"]) ?>
-                    </option>
-                    <?php foreach ($searchResults as $row): ?>
-                        <option value="<?= htmlspecialchars($row["carNum"]) . "-" . htmlspecialchars($row["setNum"]) ?>">
-                            Carriage Number: <?= htmlspecialchars($row["carNum"]) ?>, Set Number: <?= htmlspecialchars($row["setNum"]) ?>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
-                <button type="submit" name="select">Submit Selection</button>
-            </form>
         <?php else: ?>
-            <p>No results found.</p>
+            <p id="error">No results found!</p>
         <?php endif; ?>
     <?php endif; ?>
+       
 
 </body>
 </html>

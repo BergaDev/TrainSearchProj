@@ -24,6 +24,19 @@ body {
 table {
     color: white;
     font-family: 'spaceMonoBold';
+    border-collapse: collapse;
+    border: 1px yellow;
+}
+
+#results {
+    color: white;
+    font-family: 'spaceMonoBold';
+}
+
+#error {
+    color: red;
+    font-family: 'spaceMonoBold';
+    font-size: large;
 }
 
 .main-cont {
