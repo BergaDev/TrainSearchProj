@@ -12,17 +12,17 @@ if ($conn->connect_error) {
     die("Connection failed, check auth: " . $conn->connect_error);
 }
 
-// Initialize search results as empty
+
 $searchResults = null;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['query'])) {
     $query = $conn->real_escape_string($_POST['query']);
 
-    // SQL to search both columns
+    
     $sql = "SELECT * FROM car_sets WHERE carNum LIKE '%$query%' OR setNum LIKE '%$query%'";
     $result = $conn->query($sql);
 
-    // Store results
+    
     $searchResults = [];
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
