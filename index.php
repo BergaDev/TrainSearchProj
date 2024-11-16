@@ -1,8 +1,9 @@
 <?php
-$servername = "localhost";
-$username = "matthew";
-$password = "MagicSpaceWaffle!";
-$dbname = "trains_project";
+$config = require 'config.php';
+$servername = $config['servername'];
+$username = $config['username'];
+$password = $config['password'];
+$dbname = $config['dbname'];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
